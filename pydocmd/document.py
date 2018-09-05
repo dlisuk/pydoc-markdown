@@ -57,8 +57,8 @@ class Section(object):
     Render the section into *stream*.
     """
 
-    print('<h{depth} id="{id}">{title}</h{depth}>\n'
-      .format(depth = self.depth, id = self.identifier, title = self.title),
+    print('\n{header} {title}\n'
+      .format(header = '#' * self.depth, title = self.title),
       file = stream)
     print(self.content, file=stream)
 
